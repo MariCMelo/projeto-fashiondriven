@@ -2,6 +2,12 @@ let modeloCheck, golaCheck, tecidoCheck = false;
 let referenciaCheck = false
 //const seuNome = prompt("Qual seu nome?")
 
+const input = document.querySelector('.input-mensagem');
+input.addEventListener("keyup", digitarReferencia);
+
+
+
+
 
 // pedirNome();
 
@@ -13,6 +19,7 @@ function ativarBotao(){
         
         botaoConfirmado.classList.add('selecionado')
     }else{
+        console.log("cc")
         botaoConfirmado.classList.remove('selecionado')
         
     }
@@ -61,9 +68,12 @@ ativarBotao()
 //digitar referência
 
 function digitarReferencia(){
-    const   referenciaAnterior = document.querySelector('.input-mensagem');
-        if(referenciaAnterior.value.includes(".jpg") || referenciaAnterior.value.includes(".png") || referenciaAnterior.value.includes(".gif")){
+    console.log("olá")
+    const referenciaAnterior = document.querySelector('.input-mensagem');
+        if(referenciaAnterior.value.match(/\.(jpeg|jpg|gif|png)$/) != null){
             referenciaCheck = true
+        }else{
+           referenciaCheck = false 
         }
 
         ativarBotao()
