@@ -11,11 +11,6 @@ const input = document.querySelector('.input-mensagem');
 input.addEventListener("keyup", digitarReferencia);
 
 
-// pedirNome();
-
-
-
-
 //ativar o botão confirma
 function ativarBotao() {
 
@@ -25,10 +20,8 @@ function ativarBotao() {
         botaoConfirmado.classList.add('selecionado');
         botaoConfirmado.removeAttribute('disabled');
 
-
     } else {
         botaoConfirmado.classList.remove('selecionado')
-
     }
 }
 
@@ -84,13 +77,6 @@ function digitarReferencia() {
 
     ativarBotao()
 }
-//tornar botão confirma clicável
-
-
-//teste clicar
-
-
-
 
 
 //mandando pedido
@@ -145,9 +131,6 @@ function enviarPedido() {
 
     let referenciaEscolhido = document.querySelector('.input-mensagem')
     
-
-
-
     const objPedido = {
     "model": modeloEscolhido,
 	"neck": golaEscolhido,
@@ -186,7 +169,6 @@ function sucessoAoPegarPedido(resposta){
     }   
 }
 
-
 function erroAoPegarPedido(error){
     console.log('Erro ao buscar os pedidos');
     alert('Ocorreu um erro ao pegar o pedido! Tente novamente mais tarde!');
@@ -197,16 +179,3 @@ function buscarPedidos(){
         promise.then(sucessoAoPegarPedido);
         promise.catch(erroAoPegarPedido);
 }
-        // console.log(promise.data)
-    
-    
-
-
-// function renderizarPedido (pedidos){
-
-//     const ultimoPedido = document.querySelector('.pedido');
-
-//     ultimoPedido.innerHTML = '';
-
-// }
-
