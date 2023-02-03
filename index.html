@@ -123,7 +123,7 @@
         <div class="caixa-link">
             <input placeholder="Insira o link" class="input-mensagem"/>
         </div>
-        <button class="confirma">Confirmar pedido</button>
+        <button onclick ="enviarPedido()" disabled class = "confirma"> Confirmar pedido
        </div>
 
 
@@ -143,7 +143,7 @@
         
 
         <div class="pedidos">
-            <div class="pedido">
+            <!-- <div class="pedido">
                 <img src="imagens/Blusa1.png">
                 <span><b>Criador:</b></span>
             </div>
@@ -166,7 +166,7 @@
             <div class="pedido">
                 <img src="imagens/Blusa1.png">
                 <span><b>Criador:</b></span>
-            </div>
+            </div> -->
 
            
         </div>
@@ -174,9 +174,8 @@
     </div>
 </div>
 
-    <script src="script.js">
-
-    </script>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </body>
 
 </html>
