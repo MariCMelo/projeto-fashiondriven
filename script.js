@@ -160,14 +160,23 @@ function sucessoAoPegarPedido(resposta){
     for(let i=0; i<10; i++){
 
         // console.log(busca[i]);
-        html = `<div class="pedido">
-        <img class = "img-camiseta" src="${busca[i].image}">
+        html = `<div  onclick="pegarImagem('${busca[i].image}')" class="pedido">
+        <img  class = "img-camiseta" src="${busca[i].image}">
         <span><b>Criador: ${busca[i].owner}</b></span>
     </div>`
 
       pedidoCamiseta.innerHTML = pedidoCamiseta.innerHTML + html; 
     }   
 }
+
+function pegarImagem(link){
+    let inputArea = document.querySelector('.input-mensagem');
+    inputArea.value = link;
+    
+    console.log(link)
+}
+
+
 
 function erroAoPegarPedido(error){
     console.log('Erro ao buscar os pedidos');
@@ -179,3 +188,5 @@ function buscarPedidos(){
         promise.then(sucessoAoPegarPedido);
         promise.catch(erroAoPegarPedido);
 }
+
+// buscarPedidos()
